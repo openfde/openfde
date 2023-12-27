@@ -16,6 +16,6 @@ OpenFDE构建和开发方法参见:[快速开发入门](https://docs.openfde.com
 
 ### 联系我们
 
-网站：[https://openfde.com ](https://openfde.com )<br>
-问题反馈：[https://gitee.com/openfde/problem-feedback/issues ](https://gitee.com/openfde/problem-feedback/issues) <br>
-订阅我们：[https://groups.io/g/openfde/topics](https://groups.io/g/openfde/topics)
+- 网站：[https://openfde.com ](https://openfde.com )<br>
+- 问题反馈：[https://gitee.com/openfde/problem-feedback/issues ](https://gitee.com/openfde/problem-feedback/issues) <br>
+- 订阅我们：[https://groups.io/g/openfde/topics](https://groups.io/g/openfde/topics)
