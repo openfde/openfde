@@ -1,29 +1,21 @@
+### 组织介绍
+
 OpenFDE是一个基于AOSP、Waydroid、LineageOS打造的可运行andorid 应用的linux桌面环境。
 
-编译环境搭建
-1.1 准备一台X86主机，内存要求16G，最少512G固态硬盘，1T更好。（硬盘对编译的速度影响非常大）安装ubuntu22.04 下载链接：https://ubuntu.com/download/server
+OpenFDE包括多个代码仓库和一个文档仓库: </br>
+    &emsp;&emsp;- 代码仓：[https://gitee.com/openfde](https://gitee.com/openfde), 主要用于存放各源码类的项目。</br>
+    &emsp;&emsp;- 文档仓：[https://gitee.com/openfde/openfde-doc](https://gitee.com/openfde/openfde-doc)，用于存放OpenFDE社区所有的用户相关文档、开发相关文档、社区相关文档以及博客文章等。
 
+### 如何加入OpenFDE
 
-1.2 下载repo脚本文件
-  android使用repo脚本管理源码树，方便大家用一个命令就可以下载几百个仓库。
-  curl https://mirrors.tuna.tsinghua.edu.cn/git/git-repo -o repo
-  chmod +x repo
-  sudo mv repo /usr/local/bin/repo
+加入我们的方式参见：[OpenFDE社区贡献和攻略](https://docs.openfde.com/zh-CN/docs/community/contribution-strategy)
 
-  export REPO_URL='https://mirrors.tuna.tsinghua.edu.cn/git/git-repo'
-  echo export REPO_URL='https://mirrors.tuna.tsinghua.edu.cn/git/git-repo' >> ~/.bashrc
+### 如何编译OpenFDE源码
 
-1.3 安装编译依赖库
-sudo apt install git-core gnupg flex bison gperf build-essential zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z-dev libgl1-mesa-dev libxml2-utils xsltproc unzip libncurses5
+OpenFDE构建和开发方法参见:[快速开发入门](https://docs.openfde.com/zh-CN/docs/developer/Quick-Start)
 
+### 联系我们
 
-
-二. 源代码下载
-  mkdir fde && cd fde
-  repo init -u https://gitee.com/openfde/manifests -b 1.0.5 --git-lfs
-  repo sync -j24
-
-三. 源码编译
-    source build/envsetup.sh
-    lunch 46 
-    make -j24
+网站：https://openfde.com </br>
+问题反馈：https://gitee.com/openfde/problem-feedback/issues </br>
+订阅我们：https://groups.io/g/openfde/topics
