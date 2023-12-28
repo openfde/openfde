@@ -12,7 +12,7 @@ OpenFDE包括多个代码仓库和一个文档仓库: <br>
 
 ### 如何编译OpenFDE源码
 
-OpenFDE构建和开发方法参见：[快速开发入门](https://docs.openfde.com/zh-CN/docs/developer/Quick-Start)
+OpenFDE构建和开发方法参见：[快速开发入门](https://docs.openfde.com/zh-CN/docs/developer/quick-start)
 
 ### 联系我们
 
