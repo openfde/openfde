@@ -25,3 +25,4 @@ OpenFDE构建和开发方法参见：[快速开发入门](https://openfde.atlass
 - 网站：[https://openfde.com ](https://openfde.com )<br>
 - 问题反馈：[https://gitee.com/openfde/problem-feedback/issues ](https://gitee.com/openfde/problem-feedback/issues) <br>
 - 订阅我们：[https://groups.io/g/openfde/topics](https://groups.io/g/openfde/topics)
+![image](https://github.com/openfde/openfde/assets/11641277/e6f2544e-6b27-415d-8044-45cc52e4d137)
