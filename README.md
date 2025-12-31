@@ -27,5 +27,6 @@ OpenFDE构建和开发方法参见：[快速开发入门](https://openfde.atlass
 
 - 网站：[https://openfde.com ](https://openfde.com )<br>
 - 问题反馈：[https://gitee.com/openfde/problem-feedback/issues ](https://gitee.com/openfde/problem-feedback/issues) <br>
-- 订阅我们：[https://groups.io/g/openfde/topics](https://groups.io/g/openfde/topics)  slack https://join.slack.com/t/openfde/shared_invite/zt-3mcnjsotw-BLjjcVRQ6t9gMggIuQ3F6Q
+- 订阅我们：[https://groups.io/g/openfde/topics](https://groups.io/g/openfde/topics)
+- SLACK: https://join.slack.com/t/openfde/shared_invite/zt-3mcnjsotw-BLjjcVRQ6t9gMggIuQ3F6Q
 
