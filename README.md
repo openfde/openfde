@@ -15,6 +15,12 @@ OpenFDE代码仓库[https://gitee.com/openfde](https://gitee.com/openfde), 主�
 
 文档站：[https://gitee.com/openfde/openfde-doc](https://openfde.atlassian.net/wiki/spaces/OpenFDE/overview?homepageId=2457985)，用于存放OpenFDE社区所有的用户相关文档、开发相关文档、社区相关文档以及博客文章等。
 
+### OpenFDE特性介绍
+1. AOSP版本：      OpenFDE支持AOSP11 和AOSP14两个版本
+2. Linux显示协议： OpenFDE支持Wayland协议和X11协议两种（分别通过waydroid hwc 和X11 hwc支持）
+3. 设备直通：      USB摄像头、电源管理（笔记本）、Wifi（和宿主机共用）
+4. 按键助手：      使用键盘模拟触控，为多点触控而出。
+   
 ### 如何加入OpenFDE
 
 加入我们的方式参见：[OpenFDE社区贡献和攻略](https://openfde.atlassian.net/wiki/spaces/OpenFDE/pages/3277277)
