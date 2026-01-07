@@ -2,8 +2,9 @@
 
 
 &emsp;&emsp;OpenFDE是一个基于AOSP、Waydroid、LineageOS打造的可运行android 应用的linux桌面环境。OpenFDE期望为Linux带来丰富的应用软件与游戏、Android与Linux应用程序一致的使用体验、探索统一且新颖的Linux桌面应用开发方式，能够为Linux桌面提供一种全新的打开方式。
-&emsp;&emsp;桌面展示
-&emsp;&emsp;![image](https://github.com/openfde/openfde/assets/11641277/e6f2544e-6b27-415d-8044-45cc52e4d137)
+
+&emsp;&emsp;<img width="1024" height="576" alt="image" src="https://github.com/user-attachments/assets/e42fc92e-bfc1-4fb5-9a7c-9dafd5c31aa9" />
+
 
 ## 仓库介绍
 
