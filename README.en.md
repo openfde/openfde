@@ -17,10 +17,10 @@ OpenFDE [Main Repo](https://github.com/openfde)  [Mirror Repo](https://gitee.com
 [Documentation Site](https://openfde.atlassian.net/wiki/spaces/OpenFDE/overview?homepageId=2457985)，used to store all user-related documentation, development-related documentation, community-related documentation, and blog posts for the OpenFDE community.。
 
 ## Feature Introduction
-AOSP Versions: OpenFDE supports both AOSP 11 and AOSP 14. <br>
-Linux Display Protocol: OpenFDE supports both the Wayland and X11 protocols (supported via waydroid hwc and X11 hwc respectively). <br>
-Device Passthrough: USB camera, power management (for laptops), Wi-Fi (shared with the host).<br>
-Key Assistant: Uses keyboard to simulate touch input, designed for multi-touch scenarios.
+- AOSP Versions:  Supports both AOSP 11 and AOSP 14. <br>
+- Linux Display Protocol: Supports both the Wayland and X11 protocols (via waydroid hwc and X11 hwc respectively). <br>
+- Device Passthrough: USB camera, power management (for laptops), Wi-Fi (shared with the host).<br>
+- Key Assistant: Uses keyboard to simulate touch input, designed for multi-touch scenarios.
    
 ## How to Join OpenFDE
 
