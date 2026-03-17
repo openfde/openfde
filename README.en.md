@@ -31,6 +31,7 @@ For ways to join us, please refer to: [OpenFDE Community Contribution Guide](htt
 For OpenFDE build and development methods, please refer to：[Quick Development Start Guide](https://openfde.atlassian.net/wiki/spaces/OpenFDE/pages/1901477)
 
 ## Latest Updates
+- 2026-02-14 openfde14 2.0.5  [Release Notes](https://openfde.atlassian.net/wiki/spaces/OpenFDE/pages/829063171/v+2.0.5) <br>
 - 2025-12-25 openfde14 2.0.4  [Release Notes](https://openfde.atlassian.net/wiki/spaces/OpenFDE/pages/767983639/v+2.0.4) <br>
 - 2025-11-06 openfde14 2.0.3  [Release Notes](https://openfde.atlassian.net/wiki/spaces/OpenFDE/pages/564625409/v2.0.3) <br>
 - 2025-09-29 openfde14 2.0.2Beta [Release Notes](https://openfde.atlassian.net/wiki/spaces/OpenFDE/pages/389775371/v2.0.2-Beta) <br>
@@ -41,4 +42,4 @@ For OpenFDE build and development methods, please refer to：[Quick Development 
 - Website：[https://openfde.com ](https://openfde.com )<br>
 - Issue Feedback：[https://gitee.com/openfde/problem-feedback/issues ](https://gitee.com/openfde/problem-feedback/issues) <br>
 - Subscribe：[https://groups.io/g/openfde/topics](https://groups.io/g/openfde/topics)
-- SLACK: [Join Here ](https://join.slack.com/t/openfde/shared_invite/zt-3pl5j45he-tWeI4XgcDRODZm04rDUXIA)  Exp：2026-1-29version plans
+- SLACK: [Join Here ](https://discord.gg/8p7AMEPRD) 
