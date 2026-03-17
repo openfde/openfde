@@ -42,4 +42,4 @@ For OpenFDE build and development methods, please refer to：[Quick Development 
 - Website：[https://openfde.com ](https://openfde.com )<br>
 - Issue Feedback：[https://gitee.com/openfde/problem-feedback/issues ](https://gitee.com/openfde/problem-feedback/issues) <br>
 - Subscribe：[https://groups.io/g/openfde/topics](https://groups.io/g/openfde/topics)
-- SLACK: [Join Here ](https://discord.gg/8p7AMEPRD) 
+- Discord: [Join Here ](https://discord.gg/8p7AMEPRD) 
