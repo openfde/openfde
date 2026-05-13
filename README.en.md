@@ -29,6 +29,8 @@ For ways to join us, please refer to: [OpenFDE Community Contribution Guide](htt
 ## How to Build
 
 For OpenFDE build and development methods, please refer to：[Quick Development Start Guide](https://openfde.atlassian.net/wiki/spaces/OpenFDE/pages/1901477)
+## Roadmap
+[Roadmap 26] https://github.com/orgs/openfde/discussions/362
 
 ## Latest Updates
 - 2026-02-14 openfde14 2.0.5  [Release Notes](https://openfde.atlassian.net/wiki/spaces/OpenFDE/pages/829063171/v+2.0.5) <br>
