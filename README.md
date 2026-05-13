@@ -37,6 +37,9 @@ OpenFDE构建和开发方法参见：[快速开发入门](https://openfde.atlass
 - 2025-09-29 openfde14 2.0.2Beta [版本说明](https://openfde.atlassian.net/wiki/spaces/OpenFDE/pages/389775371/v2.0.2-Beta) <br>
 - 2025-04-22 openfde14 2.0.1-preview  [第一个基于AOSP14的OpenFDE版本](https://openfde.atlassian.net/wiki/spaces/OpenFDE/pages/365559812/v2.0.1-Preview) <br>
 
+## 路线图
+[26 路线图] https://github.com/orgs/openfde/discussions/362
+
 ## 联系我们
 
 - 网站：[https://openfde.com ](https://openfde.com )<br>
