@@ -31,6 +31,9 @@ OpenFDE代码仓库[https://gitee.com/openfde](https://gitee.com/openfde), 主�
 OpenFDE构建和开发方法参见：[快速开发入门](https://openfde.atlassian.net/wiki/spaces/OpenFDE/pages/1901477)
 
 ## 最近更新
+- 2026-06-11 openfde14 2.0.8  [版本说明](https://openfde.atlassian.net/wiki/spaces/OpenFDE/pages/1047494698/v2.0.8) <br>
+- 2026-04-22 openfde14 2.0.7  [版本说明](https://openfde.atlassian.net/wiki/spaces/OpenFDE/pages/952107011/v2.0.7) <br>
+- 2026-03-17 openfde14 2.0.6  [版本说明](https://openfde.atlassian.net/wiki/spaces/OpenFDE/pages/925499393/v2.0.6) <br>
 - 2026-02-14 openfde14 2.0.5  [版本说明](https://openfde.atlassian.net/wiki/spaces/OpenFDE/pages/829063171/v+2.0.5) <br>
 - 2025-12-25 openfde14 2.0.4  [版本说明](https://openfde.atlassian.net/wiki/spaces/OpenFDE/pages/767983639/v+2.0.4) <br>
 - 2025-11-06 openfde14 2.0.3  [版本说明](https://openfde.atlassian.net/wiki/spaces/OpenFDE/pages/564625409/v2.0.3) <br>
