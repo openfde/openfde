@@ -21,6 +21,8 @@ OpenFDE [Main Repo](https://github.com/openfde)  [Mirror Repo](https://gitee.com
 - Linux Display Protocol: Both the Wayland and X11 protocols (via waydroid hwc and X11 hwc respectively). <br>
 - Device Passthrough: USB camera, power management (for laptops), Wi-Fi (shared with the host).<br>
 - Key Assistant: Uses keyboard to simulate touch input, designed for multi-touch scenarios.
+- LibHybris: Reuse the Linux OpenGLES EGL for android by libhybris。
+- X11 Server：Implement X11 server based on android，support dri3， to run linux apps seamless on android.
    
 ## How to Join OpenFDE
 
