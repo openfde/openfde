@@ -1,3 +1,6 @@
+# A step-by-step guide to running Linux applications on your Android desktop
+
+
 As those who read our previous article likely know, OpenFDE is a Linux desktop environment built upon the AOSP graphics stack. While it is essentially an Android-based desktop, we have adapted the display and control mechanisms for Linux applications within the AOSP environment. This enables the seamless, integrated display of both Linux and Android applications, allowing users to run programs from different platforms—and leverage their respective software ecosystems—without even noticing the underlying differences. The result is OpenFDE: a Linux desktop environment that integrates seamlessly with Android.
 
 Of course, this technology is not limited to the OpenFDE desktop; it can also be applied to other Android systems, such as smartphones and tablets. Let’s take a look at the underlying principles.
