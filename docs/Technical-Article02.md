@@ -4,20 +4,22 @@
 
 Those who have read our previous technical article should already know that we used to run Linux applications on the desktop with the VNC solution，but this solution has a flaw：because it directly projects the Linux screen，there is always only one window during use，no matter how many pages you open，they are all confined within that frame，which is quite inconvenient.
 
-<img width="1676" height="800" alt="image" src="https://github.com/user-attachments/assets/9f4b9929-3c87-4ff7-a009-4b61a8b57d1f" />
+<img width="2864" height="1610" alt="image" src="https://github.com/user-attachments/assets/7cb378fd-afb9-4e48-9d6f-49d5f37125cc" />
 
 So after research and exploration，we adopted a new technical solution—xserver，which can directly deliver program display content without screen image forwarding；the biggest change in practice is that you can open multiple windows，and the overall interaction is no different from Linux（for example，you can merge and split windows directly by dragging，and you are prompted whether to save when closing a document，etc.）。
 
 ##### **Principle Explanation：**
 
 In case anyone does not know，before explaining the principle，let me mention that we are actually a Linux desktop based on AOSP，with the underlying layer based on Waydroid，so it is somewhat like an Android desktop that can run on Linux
+<img width="1676" height="800" alt="image" src="https://github.com/user-attachments/assets/2c1999fc-924f-49ab-8cb8-e0e7522bc4d2" />
 
-<img width="1528" height="873" alt="image" src="https://github.com/user-attachments/assets/a9b9cf57-8bb1-4498-a48a-1397e152e887" />
+
 
 
 This is a comparison of the technical structures of the two：you can see that VNC forwards operations and images through vncserver，while the xserver process is much simplified，performing better in aspects such as performance，compatibility，and user experience；next，we will explain the xserver solution in detail：
+<img width="1528" height="873" alt="image" src="https://github.com/user-attachments/assets/a9b9cf57-8bb1-4498-a48a-1397e152e887" />
 
-<img width="1776" height="963" alt="image" src="https://github.com/user-attachments/assets/0031b3f6-ef96-4ca3-8582-f78208a64c39" />
+
 
 
 This is a detailed structure diagram of xserver. Let me first briefly introduce the background：Xserver is a core component of the X Window System，and X Window is actually one of the foundations of the graphical environments of Linux distributions；popular Linux desktop environments such as the well-known GNOME and KDE Plasma are all built on the X Window System. So what you can see is that we ported the xserver originally used in Linux systems to our FDE desktop，where it is responsible for managing display devices and processing requests from X clients，allowing Linux applications to run directly on our desktop through this approach.
@@ -27,8 +29,8 @@ Next，let us explain this structure in detail：the orange part on the left con
 Many extensions and supplementary protocols on Xserver make it still the most compatible and efficient display solution on Linux，supporting both local and remote connections with very small memory usage. Compiling and debugging in the Android NDK is also quite convenient，with no redundant dependencies，and there are many mature solutions we can learn from.
 
 Below XWindowService there is another module，which is **WindowManager（window manager）**，a program used to manage and control X Window System (X11) windows. It handles operations such as opening，closing，moving，and resizing windows，and determines the appearance and behavior of windows. On OpenFDE，the Xserver connects to a custom-developed basic window manager，which runs in FDE-X11，has no window decoration function，and additionally implements functions such as a compositor，window property synchronization，and clipboard synchronization.
+<img width="1776" height="963" alt="image" src="https://github.com/user-attachments/assets/0031b3f6-ef96-4ca3-8582-f78208a64c39" />
 
-<img width="2864" height="1610" alt="image" src="https://github.com/user-attachments/assets/7b75a95e-0020-41ab-9724-4ea5c996da70" />
 
 In the window manager，there is a relatively innovative point of ours called\*\*Compositor（compositor）image redirection，\*\*the Compositor extension is enabled in the window manager. Composite allows redirecting the output content of windows during the creation and display of all windows，redirecting the rendering of all windows in a window tree to internal storage，and then finally obtaining the image buffer of the window through the window pointer. The principle by which the compositor implements window effects is also based on this.
 
