@@ -1,10 +1,10 @@
 # Break free from VNC and unlock a true multi-window Linux experience on Android.
 
-<img width="1676" height="800" alt="image" src="https://github.com/user-attachments/assets/d2d31f7f-7add-40ce-b979-2c0071c586cd" />
+<img width="2864" height="1610" alt="image" src="https://github.com/user-attachments/assets/33934278-7434-4c2a-921d-efa09650f9f6" />
 
 Those who have read our previous technical article should already know that we used to run Linux applications on the desktop with the VNC solution，but this solution has a flaw：because it directly projects the Linux screen，there is always only one window during use，no matter how many pages you open，they are all confined within that frame，which is quite inconvenient.
 
-<img width="1776" height="963" alt="image" src="https://github.com/user-attachments/assets/3915aea0-71e7-4aa1-b944-3647dce48f3b" />
+<img width="1676" height="800" alt="image" src="https://github.com/user-attachments/assets/9f4b9929-3c87-4ff7-a009-4b61a8b57d1f" />
 
 So after research and exploration，we adopted a new technical solution—xserver，which can directly deliver program display content without screen image forwarding；the biggest change in practice is that you can open multiple windows，and the overall interaction is no different from Linux（for example，you can merge and split windows directly by dragging，and you are prompted whether to save when closing a document，etc.）。
 
@@ -12,11 +12,12 @@ So after research and exploration，we adopted a new technical solution—xserve
 
 In case anyone does not know，before explaining the principle，let me mention that we are actually a Linux desktop based on AOSP，with the underlying layer based on Waydroid，so it is somewhat like an Android desktop that can run on Linux
 
-<img width="1321" height="880" alt="image" src="https://github.com/user-attachments/assets/39434fd5-5b1f-4906-a3e2-a5d60bf873d4" />
+<img width="1528" height="873" alt="image" src="https://github.com/user-attachments/assets/a9b9cf57-8bb1-4498-a48a-1397e152e887" />
+
 
 This is a comparison of the technical structures of the two：you can see that VNC forwards operations and images through vncserver，while the xserver process is much simplified，performing better in aspects such as performance，compatibility，and user experience；next，we will explain the xserver solution in detail：
 
-<img width="1528" height="873" alt="image" src="https://github.com/user-attachments/assets/bcb9ca06-500a-41bd-af56-0b41f3259021" />
+<img width="1776" height="963" alt="image" src="https://github.com/user-attachments/assets/0031b3f6-ef96-4ca3-8582-f78208a64c39" />
 
 
 This is a detailed structure diagram of xserver. Let me first briefly introduce the background：Xserver is a core component of the X Window System，and X Window is actually one of the foundations of the graphical environments of Linux distributions；popular Linux desktop environments such as the well-known GNOME and KDE Plasma are all built on the X Window System. So what you can see is that we ported the xserver originally used in Linux systems to our FDE desktop，where it is responsible for managing display devices and processing requests from X clients，allowing Linux applications to run directly on our desktop through this approach.
@@ -27,13 +28,13 @@ Many extensions and supplementary protocols on Xserver make it still the most co
 
 Below XWindowService there is another module，which is **WindowManager（window manager）**，a program used to manage and control X Window System (X11) windows. It handles operations such as opening，closing，moving，and resizing windows，and determines the appearance and behavior of windows. On OpenFDE，the Xserver connects to a custom-developed basic window manager，which runs in FDE-X11，has no window decoration function，and additionally implements functions such as a compositor，window property synchronization，and clipboard synchronization.
 
-<img width="1528" height="873" alt="image" src="https://github.com/user-attachments/assets/fd7fafe5-ee64-4767-bc61-1640c503ffb4" />
+<img width="2864" height="1610" alt="image" src="https://github.com/user-attachments/assets/7b75a95e-0020-41ab-9724-4ea5c996da70" />
 
 In the window manager，there is a relatively innovative point of ours called\*\*Compositor（compositor）image redirection，\*\*the Compositor extension is enabled in the window manager. Composite allows redirecting the output content of windows during the creation and display of all windows，redirecting the rendering of all windows in a window tree to internal storage，and then finally obtaining the image buffer of the window through the window pointer. The principle by which the compositor implements window effects is also based on this.
 
 In this way，the image buffer of each window can be separated out and handed over to Android for drawing，that is，directly taking the image data from the Linux window into the Android window.
 
-<img width="2864" height="1610" alt="image" src="https://github.com/user-attachments/assets/89c52b1a-5c1c-4a28-851f-175f0003d105" />
+<img width="1528" height="873" alt="image" src="https://github.com/user-attachments/assets/bdf5c9cf-0c1b-4581-8e36-4080c4f2e84d" />
 
 And the green part on the far right is **SurfaceManager and Activity，responsible for displaying content and receiving events**
 
@@ -41,7 +42,7 @@ Among them，SurfaceManager is a module abstracted out by FDE-X11，used to mana
 
 As for the Activity part，it is mainly used as the window corresponding one-to-one with Linux. In the Android window system，the level handled by an APP window is confined to one level range，and only windows within this level range will have the same interaction behavior as windows of other APPs；currently，the only selectable Android components are Activity and Dialog. Their role is to create a SurfaceView to display the output image，receive Android input events，and send them to Xserver. Under the Android freeform mode used by FDE，the behavior is roughly equivalent to a Linux desktop，and in theory it can even be completely identical.
 
-<img width="2864" height="1610" alt="image" src="https://github.com/user-attachments/assets/21e7e49a-06ba-4bde-a8bd-95685977aa1a" />
+<img width="1321" height="880" alt="image" src="https://github.com/user-attachments/assets/c80d254a-ab4c-45dc-922d-a0ab1bf28252" />
 
 When a Linux window is created，an Activity is created in Android，and the image of the Linux window is displayed on the SurfaceView of this Activity；if the Activity receives keyboard or mouse input，it is sent to the corresponding coordinates of Xserver. There are many problems to handle in this process，such as lifecycle synchronization，window types，event redirection，window icon and title bar operations，and so on.
 
