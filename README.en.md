@@ -23,6 +23,7 @@ OpenFDE [Main Repo](https://github.com/openfde)  [Mirror Repo](https://gitee.com
 - Key Assistant: Uses keyboard to simulate touch input, designed for multi-touch scenarios.
 - LibHybris: Reuse the Linux OpenGLES EGL for android by libhybris。
 - X11 Server：Implement X11 server based on android，support dri3， to run linux apps seamless on android.
+- Filesystem Fusing:   Bidirectional filesystem access between Android and Linux
    
 ## How to Join OpenFDE
 
