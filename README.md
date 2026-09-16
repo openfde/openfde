@@ -21,8 +21,9 @@ OpenFDE代码仓库[https://gitee.com/openfde](https://gitee.com/openfde), 主�
 2. Linux显示协议： OpenFDE支持Wayland协议和X11协议两种（分别通过waydroid hwc 和X11 hwc支持）
 3. 设备直通：      USB摄像头、电源管理（笔记本）、Wifi（和宿主机共用）
 4. 按键助手：      使用键盘模拟触控，为多点触控而出。
-5. LibHybris:      为Android复用Linux驱动,降低对gpu的Android驱动要求。
-6. X11 Server：   在Android实现一个完整的X11 server，无缝运行Linux应用。
+5. LibHybris:     为Android复用Linux驱动,降低对gpu的Android驱动要求。
+6. X11 Server：   在Android实现一个完整的X11 server，无缝运行Linux应用，同时和Android 剪切板互通。
+7. 文件系统融合:    支持Android 和Linux 应用双向访问对方文件系统。
    
 ## 如何加入OpenFDE
 
